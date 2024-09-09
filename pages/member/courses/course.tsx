@@ -25,7 +25,7 @@ const Index =({course}) => {
 
       {
         videos.map((blog) => (
-            <div>
+            <div key={Math.random()}>
                 <iframe width="700" height="400" className='rounded-xl ' src={blog} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                 <div className="divider divider-neutral"></div>
             </div>

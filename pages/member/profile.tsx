@@ -4,12 +4,12 @@ import Image from 'next/image'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 
-const profile = () => {
+const Profile = () => {
    const [emblaRef] = useEmblaCarousel({ loop: false }, [Autoplay({delay : 2000})])
   return (
     <div>
       <MemSidebar />
-      <div className="p-4 sm:ml-64">
+      <div className="p-4 sm:ml-64"> 
       <div className='w-full flex justify-center items-center font-bold text-3xl mt-14 mb-1'>My Profile</div>
       <div className='w-full flex justify-center items-center'>
       <div className='w-2/5 pr-1'>
@@ -281,4 +281,4 @@ const profile = () => {
   )
 }
 
-export default profile
+export default Profile
