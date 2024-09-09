@@ -49,8 +49,8 @@ const Login = () => {
 
         <form className="max-w-xl scale-110 w-full p-6 mx-auto">
           <div className="mb-12">
-            <h3 className="text-gray-800 text-4xl font-extrabold">Sign in</h3>
-            <p className="text-gray-800 text-sm mt-6">Dont have an account <a href="javascript:void(0);" className="text-blue-600 font-semibold hover:underline ml-1 whitespace-nowrap">Register here</a></p>
+            <h3 className="text-gray-100 text-4xl font-extrabold">Sign in</h3>
+            <p className="text-gray-100 text-sm mt-6">Dont have an account <a href="javascript:void(0);" className="text-blue-600 font-semibold hover:underline ml-1 whitespace-nowrap">Register here</a></p>
           </div>
 
           <div>
@@ -107,7 +107,7 @@ const Login = () => {
             <hr className="w-full border-gray-300" />
           </div>
 
-          <button type="button" className="w-full flex items-center justify-center gap-4 py-2.5 px-4 text-sm tracking-wide text-gray-800 border border-gray-300 rounded-md bg-transparent hover:bg-gray-50 focus:outline-none">
+          <button type="button" className="w-full flex items-center justify-center gap-4 py-2.5 px-4 text-sm tracking-wide text-gray-100 border border-gray-300 rounded-md bg-transparent hover:bg-gray-50 focus:outline-none">
             <svg xmlns="http://www.w3.org/2000/svg" width="20px" className="inline" viewBox="0 0 512 512">
               <path fill="#fbbd00"
                 d="M120 256c0-25.367 6.989-49.13 19.131-69.477v-86.308H52.823C18.568 144.703 0 198.922 0 256s18.568 111.297 52.823 155.785h86.308v-86.308C126.989 305.13 120 281.367 120 256z"

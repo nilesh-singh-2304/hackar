@@ -43,9 +43,9 @@ const Summary = () => {
         </div>
 
         <div className="bg-white mt-12 flex px-1 py-1.5 rounded-full shadow-[0_5px_22px_-8px_rgba(93,96,127,0.2)] md:w-4/5 mx-auto overflow-hidden">
-          <input value={url} onChange={handleChange} type='email' placeholder='Enter your email' className="w-full outline-none bg-white pl-4 text-gray-800 text-sm" />
+          <input value={url} onChange={handleChange} type='email' placeholder='Enter your link' className="w-full outline-none bg-white pl-4 text-gray-800 text-sm" />
           <button type='button' onClick={handleSubmit}
-            className="bg-blue-600 hover:bg-blue-700 transition-all text-white text-sm rounded-full px-4 py-2.5">Subscribe</button>
+            className="bg-blue-600 hover:bg-blue-700 transition-all text-white text-sm rounded-full px-4 py-2.5">Enter</button>
         </div>
 
         {show && <div className=' mt-5 w-full flex justify-center items-center font-bold text-md'>

@@ -1,18 +1,20 @@
-import { useChat } from 'ai/react';
-export const runtime = 'experimental-edge';
+import { useChat } from "ai/react";
+export const runtime = "experimental-edge";
 export default function Chat() {
   const { messages, input, handleInputChange, handleSubmit } = useChat();
   return (
     <div className="flex flex-col w-full max-w-xl py-24 mx-auto stretch">
-      {messages.map(m => (
+      {messages.map((m) => (
         <div key={m.id} className="whitespace-pre-wrap">
-          {m.role === 'user' ? <div className="chat chat-end ">
-  <div className="chat-bubble chat-bubble-info">{m.content}</div>
-</div> : <div className="chat chat-start">
-  <div className="chat-bubble chat-bubble-success">
-    {m.content}
-  </div>
-</div>}
+          {m.role === "user" ? (
+            <div className="chat chat-end ">
+              <div className="chat-bubble chat-bubble-info">{m.content}</div>
+            </div>
+          ) : (
+            <div className="chat chat-start">
+              <div className="chat-bubble chat-bubble-success">{m.content}</div>
+            </div>
+          )}
         </div>
       ))}
 

@@ -9,7 +9,7 @@ const Profile = () => {
   return (
     <div>
       <MemSidebar />
-      <div className="p-4 sm:ml-64"> 
+      <div className="p-4 sm:ml-64">
       <div className='w-full flex justify-center items-center font-bold text-3xl mt-14 mb-1'>My Profile</div>
       <div className='w-full flex justify-center items-center'>
       <div className='w-2/5 pr-1'>

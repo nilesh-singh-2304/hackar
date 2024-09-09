@@ -16,4 +16,4 @@ const PostSchema = new Schema(
 ); //timestamp true krn se created at , updated at , etc functionalities kaam krn lgti h
 
 mongoose.models = {}; //isk bina product cant be overwrite ka error aa jyega
-export default mongoose.model("Post", PostSchema);
+export default mongoose.model("Post", PostSchema); 
