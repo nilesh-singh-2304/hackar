@@ -162,7 +162,7 @@ const AdminIndex = ({course}) => {
               <tbody>
                 {/* row 1 */}
                 {coursee.map((course) => (
-                  <tr>
+                  <tr key={course._id}>
                   <td>{course.name}</td>
                   <td>{course.price}</td>
                   <td>{course.launch}</td>
