@@ -21,7 +21,7 @@ const Index =({course}) => {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
          {course.map((blog) => (
-            <div key={blog.name} className="bg-white rounded-lg overflow-hidden shadow-lg">
+            <div key={blog._id} className="bg-white rounded-lg overflow-hidden shadow-lg">
             <img src={blog.imgurl} alt="Blog Post 1" className="w-full h-52 object-top" />
             <div className="p-6">
                <div className='flex justify-start gap-5 mb-2'>

@@ -262,7 +262,7 @@ const Community = ({posts}) => {
                   </div>
                   <div className="divider divider-neutral mt-10 mb-10"></div>
                   {postss.map((post) => (
-                      <div>
+                      <div key={post._id}>
                       <div className="max-w-xl shadow-lg scale-110 rounded-xl w-full lg:max-w-full lg:flex">
                         <div
                           className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-l-xl text-center overflow-hidden "

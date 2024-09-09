@@ -48,7 +48,7 @@ const Yt = (yt) => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-sm:gap-8">
           {cont.map((yt) =>(
-            <div className="bg-white rounded overflow-hidden">
+            <div key={yt.thumbnail} className="bg-white rounded overflow-hidden">
             <img src={yt.thumbnail} alt="Blog Post 1" className="w-full h-52 object-cover" />
             <div className="p-6">
               <h3 className="text-lg font-bold text-gray-800 mb-3">{yt.title}</h3>
@@ -57,7 +57,7 @@ const Yt = (yt) => {
               <a href={yt.link} className="mt-4 inline-block px-4 py-2 rounded tracking-wider bg-purple-600 hover:bg-purple-700 text-white text-[13px]">Watch</a>
             </div>
           </div>
-          ) ) }
+          ) ) } 
           
         </div>
       </div>

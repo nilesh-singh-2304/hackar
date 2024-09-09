@@ -50,7 +50,7 @@ const Login = () => {
         <form className="max-w-xl scale-110 w-full p-6 mx-auto">
           <div className="mb-12">
             <h3 className="text-gray-800 text-4xl font-extrabold">Sign in</h3>
-            <p className="text-gray-800 text-sm mt-6">Don't have an account <a href="javascript:void(0);" className="text-blue-600 font-semibold hover:underline ml-1 whitespace-nowrap">Register here</a></p>
+            <p className="text-gray-800 text-sm mt-6">Dont have an account <a href="javascript:void(0);" className="text-blue-600 font-semibold hover:underline ml-1 whitespace-nowrap">Register here</a></p>
           </div>
 
           <div>
