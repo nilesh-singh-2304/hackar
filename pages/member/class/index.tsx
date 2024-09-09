@@ -54,7 +54,7 @@ const Sess = () => {
          <div className='justify-center items-center flex-col flex mt-4'>
           <button
           className='text-normal font-medium hover:text-blue-500 hover:underline'
-          onClick={() => router.push(`${process.env.NEXT_PUBLIC_HOST}/session/${uuid()}`)}
+          onClick={() => router.push(`${process.env.NEXT_PUBLIC_HOST}`)}
           >or create a new meeting</button>
          </div>
         </>}
