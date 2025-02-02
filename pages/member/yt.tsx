@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import MemSidebar from '@/components/memSidebar';
 import axios from 'axios';
 const Yt = (yt) => {
-    const [cont, setcont] = useState(yt.yt)
+    const [cont, setcont] = useState(yt.yt.items)
     const [query, setquery] = useState('')
     console.log(cont)
 
@@ -20,7 +20,7 @@ const Yt = (yt) => {
           }
         )
         console.log(res.data.data)
-        setcont(res.data.data)
+        setcont(res.data.data.items)
     }
 
   return (
@@ -48,13 +48,13 @@ const Yt = (yt) => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-sm:gap-8">
           {cont.map((yt) =>(
-            <div key={yt.thumbnail} className="bg-white rounded overflow-hidden">
-            <img src={yt.thumbnail} alt="Blog Post 1" className="w-full h-52 object-cover" />
+            <div key={yt.snippet.thumbnails.default.url} className="bg-white rounded overflow-hidden">
+            <img src={yt.snippet.thumbnails.default.url} alt="Blog Post 1" className="w-full h-52 object-cover" />
             <div className="p-6">
-              <h3 className="text-lg font-bold text-gray-800 mb-3">{yt.title}</h3>
-              <p className="text-gray-500 text-sm">Channel : {yt.page_name}</p>
-              <p className="text-gray-800 text-[13px] font-semibold mt-4">Duration : {yt.duration}</p>
-              <a href={yt.link} className="mt-4 inline-block px-4 py-2 rounded tracking-wider bg-purple-600 hover:bg-purple-700 text-white text-[13px]">Watch</a>
+              <h3 className="text-lg font-bold text-gray-800 mb-3">{yt.snippet.title}</h3>
+              <p className="text-gray-500 text-sm">Channel : {yt.snippet.channelTitle}</p>
+              <p className="text-gray-800 text-[13px] font-semibold mt-4">Published : {yt.snippet.publishTime}</p>
+              <a href={`https://www.youtube.com/watch?v=${yt.id.videoId}`} className="mt-4 inline-block px-4 py-2 rounded tracking-wider bg-purple-600 hover:bg-purple-700 text-white text-[13px]">Watch</a>
             </div>
           </div>
           ) ) } 
@@ -72,19 +72,22 @@ const Yt = (yt) => {
 }
 
 export async function getServerSideProps() {
-    const options = {
-        method: 'POST',
-        url: 'https://yt-api5.p.rapidapi.com/search',
-        headers: {
-          'x-rapidapi-key': 'efdbb399d6msh78a4b7750642cc8p197564jsnff76aecec8b1',
-          'x-rapidapi-host': 'yt-api5.p.rapidapi.com',
-          'Content-Type': 'application/json'
-        },
-        data: {
-          q: 'next js',
-          limit: 10
-        }
-      };
+  const options = {
+    method: 'GET',
+    url: 'https://youtube-api52.p.rapidapi.com/search',
+    params: {
+      q: 'nextjs',
+      order: 'relevance',
+      videoDuration: 'any',
+      type: 'video',
+      maxResults: '25',
+      part: 'snippet'
+    },
+    headers: {
+      'x-rapidapi-key': 'efdbb399d6msh78a4b7750642cc8p197564jsnff76aecec8b1',
+      'x-rapidapi-host': 'youtube-api52.p.rapidapi.com'
+    }
+  };
       
       
           const response = await axios.request(options);
