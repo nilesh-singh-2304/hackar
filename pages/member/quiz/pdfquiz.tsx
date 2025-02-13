@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import MemSidebar from "@/components/memSidebar";
 import Link from "next/link";
-const pdfquiz = () => {
+const Pdfquiz = () => {
   const [topic, settopic] = useState("");
   const [noque, setnoque] = useState(0);
   const [difficulty, setdifficulty] = useState("");
@@ -120,4 +120,4 @@ const pdfquiz = () => {
   );
 };
 
-export default pdfquiz;
+export default Pdfquiz;
