@@ -2,7 +2,6 @@
 import React from 'react'
 import axios from 'axios';
 import MemSidebar from '@/components/memSidebar'
-import { log } from 'console';
 import Link from 'next/link';
 const Index =({course}) => {
    console.log(course)
