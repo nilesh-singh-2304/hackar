@@ -4,7 +4,7 @@ import MemSidebar from "@/components/memSidebar";
 import Link from "next/link";
 const Pdfquiz = () => {
   const [topic, settopic] = useState("");
-  const [noque, setnoque] = useState(0);
+  const [noque, setnoque] = useState("");
   const [difficulty, setdifficulty] = useState("");
   const [mcq, setmcq] = useState([]);
   const [check, setcheck] = useState(false)
