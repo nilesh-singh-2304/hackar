@@ -117,12 +117,12 @@ const MemSidebar = () => {
             </Link>
          </li>
 
-         {/* <li>
+         <li>
             <Link href="/member/courses" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-gray-500 hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 group">
             <TbTargetArrow className='scale-150' />
                <span className="ms-3">Courses</span>
             </Link>
-         </li> */}
+         </li>
 
          <li>
             <Link href="/member/profile" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-gray-500 hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 group">
