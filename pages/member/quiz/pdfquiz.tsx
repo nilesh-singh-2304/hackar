@@ -78,15 +78,15 @@ const Pdfquiz = () => {
               <option value="HARD">HARD</option>
               <option value="VERY_HARD">VERY_HARD</option>
             </select>
-            <button onClick={handleSubmit} className="btn glass">
+            <button onClick={handleSubmit} className="btn  ml-2 glass">
               Get Quiz
             </button>
           </div>
         </div>
 
-        <div className="mockup-browser bg-base-300 border">
+        <div className="mockup-browser mt-10 bg-base-300 border">
           <div className="mockup-browser-toolbar">
-            <div className="input">https://daisyui.com</div>
+            <div className="input">https://quested.com</div>
           </div>
           <div className="bg-base-200 flex flex-col overflow-y-scroll max-h-128 mt-10 justify-center px-4 py-16">
             {mcq.map((mcq) => (

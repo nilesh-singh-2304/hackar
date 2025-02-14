@@ -101,9 +101,10 @@ const Yt = (yt) => {
                       <div className="modal" role="dialog">
                         <div className="modal-box">
                           <h3 className="text-lg font-bold">Hello!</h3>
-                          <p className="py-4">
+                          <div className="py-4">
                             Here the summary for your video will appear !!
-                          </p>
+                            <p className="mt-5">{yt.snippet.description}</p>
+                          </div>
                           <div className="modal-action">
                             <label htmlFor="my_modal_6" className="btn">
                               Close!
