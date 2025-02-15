@@ -24,10 +24,10 @@ const Profile = () => {
                   <div className="">
                     <Image
                       loader={() =>
-                        "https://i.scdn.co/image/ab67616d00001e02c77e33a16861450b8e858dcb"
+                        "https://i.pinimg.com/736x/c0/74/9b/c0749b7cc401421662ae901ec8f9f660.jpg"
                       }
                       src={
-                        "https://i.scdn.co/image/ab67616d00001e02c77e33a16861450b8e858dcb"
+                        "https://i.pinimg.com/736x/c0/74/9b/c0749b7cc401421662ae901ec8f9f660.jpg"
                       }
                       loading="lazy"
                       width={190}
@@ -36,20 +36,10 @@ const Profile = () => {
                       className="rounded-md scale-110 "
                     ></Image>
                   </div>
-                  <div className="">
-                    <Image
-                      loader={() =>
-                        "https://i.scdn.co/image/ab67616d00001e02c77e33a16861450b8e858dcb"
-                      }
-                      src={
-                        "https://i.scdn.co/image/ab67616d00001e02c77e33a16861450b8e858dcb"
-                      }
-                      loading="lazy"
-                      width={190}
-                      height={190}
-                      alt="Photo by Fakurian Design"
-                      className="rounded-md scale-110 "
-                    ></Image>
+                  <div className=" mr-5">
+                    <p className="mt-2">Name : Nilesh Singh</p>
+                    <p className="mt-2">Email : 0R0o8@example.com</p>
+                    <p className="mt-2">College : YMCA Faridabad</p>
                   </div>
                 </div>
 

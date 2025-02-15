@@ -29,7 +29,7 @@ const Index =({course}) => {
                </div>
                <div className='flex justify-start gap-5 mb-2'>
                   <span><b>Price : </b> {blog.price}</span>
-                  <span><Link href={`/member/courses/course?id=${blog._id}`}><button className="btn btn-primary">Primary</button></Link></span>
+                  <span><Link href={`/member/courses/course?id=${blog._id}`}><button className="btn btn-primary">Enroll</button></Link></span>
                </div>
             </div>
           </div>
