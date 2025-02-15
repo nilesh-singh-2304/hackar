@@ -6,7 +6,7 @@ import Autoplay from 'embla-carousel-autoplay'
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import Link from "next/link";
-
+import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -895,11 +895,10 @@ export default function Home() {
             <div
               className="flex lg:items-center justify-start flex-col lg:flex-row max-lg:gap-4 lg:flex-1 lg:justify-end"
             >
-              <Link href={'/member/login'}><button
-                className="bg-indigo-50 text-indigo-600 rounded-full cursor-pointer font-semibold text-center shadow-xs transition-all duration-500 py-3 px-6 text-sm hover:bg-indigo-100"
-              >
-                Login
-              </button></Link>
+              <SignedOut>
+                <SignInButton />
+              </SignedOut>
+      
               <button
                 className="bg-indigo-600 text-white rounded-full cursor-pointer font-semibold text-center shadow-xs transition-all duration-500 py-3 px-6 text-sm lg:ml-5 hover:bg-indigo-700"
               >

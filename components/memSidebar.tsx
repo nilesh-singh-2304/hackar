@@ -9,6 +9,7 @@ import { RiCommunityFill } from "react-icons/ri";
 import { TfiYoutube } from "react-icons/tfi";
 import { TbTargetArrow } from "react-icons/tb";
 import { RiAccountPinBoxFill } from "react-icons/ri";
+import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 
 import Link from 'next/link';
 const MemSidebar = () => {
@@ -31,7 +32,9 @@ const MemSidebar = () => {
             <div>
               <button type="button" className="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" aria-expanded="false" data-dropdown-toggle="dropdown-user">
                 <span className="sr-only">Open user menu</span>
-                <img className="w-8 h-8 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="user photo"/>
+                <SignedIn>
+        <UserButton />
+      </SignedIn>
               </button>
             </div>
             <div className="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600" id="dropdown-user">
@@ -97,12 +100,12 @@ const MemSidebar = () => {
                <span className="ms-3">AI Quiz</span>
             </Link>
          </li>
-         <li>
+         {/* <li>
             <Link href="content" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-gray-500 hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 group">
             <TfiWrite className='scale-150' />
                <span className="ms-3">Social Media Content Writer</span>
             </Link>
-         </li>
+         </li> */}
          <li>
             <Link href="/member/yt" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-gray-500 hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 group">
             <TfiYoutube className='scale-150' />

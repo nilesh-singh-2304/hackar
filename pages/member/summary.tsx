@@ -36,19 +36,13 @@ const Summary = () => {
             AI-Driven Summarizers
           </div>
 
-          <div className="font-[sans-serif] px-6 py-16 bg-gradient-to-t from-gray-200 via-gray-50 to-gray-50">
+          <div className="font-[sans-serif] px-6 py-16 pt-8 bg-gradient-to-t ">
             <div className="text-center max-w-3xl max-md:max-w-md mx-auto">
               {/* <p className="text-sm font-bold text-blue-600 mb-4"><span className="rotate-90 inline-block mr-2">|</span> ALL IN ONE IN READYMADEUI</p> */}
-              <h2 className="text-gray-800 md:text-5xl text-3xl font-extrabold md:!leading-[55px]">
+              <h2 className="text-gray-100 md:text-5xl text-3xl font-extrabold md:!leading-[55px]">
                 Call AI to Elevate Your Experience
               </h2>
               <div className="mt-8">
-                <p className="text-base text-gray-500 leading-relaxed">
-                  Need a quick summary? Our AI-powered text summarizer instantly
-                  condenses lengthy articles, reports, or documents into concise
-                  and clear summaries. Save time and get the key points at a
-                  glance with just one click!
-                </p>
               </div>
 
               <div className="bg-white mt-12 flex px-1 py-1.5 rounded-full shadow-[0_5px_22px_-8px_rgba(93,96,127,0.2)] md:w-4/5 mx-auto overflow-hidden">

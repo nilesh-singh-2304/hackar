@@ -3,11 +3,15 @@ import MemSidebar from "@/components/memSidebar";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+import { getAuth, buildClerkProps, clerkClient } from '@clerk/nextjs/server'
+import { GetServerSideProps } from 'next'
 
-const Profile = () => {
+const Profile = (props) => {
   const [emblaRef] = useEmblaCarousel({ loop: false }, [
     Autoplay({ delay: 2000 }),
   ]);
+  console.log(props)
+  console.log(props.__clerk_ssr_state.user.emailAddresses[0])
   return (
     <div>
       <MemSidebar />
@@ -22,24 +26,12 @@ const Profile = () => {
                 <div className="h-4/6 mb-2 flex justify-between px-4 items-center">
                   {/* <Image src={''} alt='' height={100} width={100}/> */}
                   <div className="">
-                    <Image
-                      loader={() =>
-                        "https://i.pinimg.com/736x/c0/74/9b/c0749b7cc401421662ae901ec8f9f660.jpg"
-                      }
-                      src={
-                        "https://i.pinimg.com/736x/c0/74/9b/c0749b7cc401421662ae901ec8f9f660.jpg"
-                      }
-                      loading="lazy"
-                      width={190}
-                      height={190}
-                      alt="Photo by Fakurian Design"
-                      className="rounded-md scale-110 "
-                    ></Image>
+                    <img className="h-48" src={`${props.__clerk_ssr_state.user.imageUrl}`} alt="" />
                   </div>
                   <div className=" mr-5">
-                    <p className="mt-2">Name : Nilesh Singh</p>
-                    <p className="mt-2">Email : 0R0o8@example.com</p>
-                    <p className="mt-2">College : YMCA Faridabad</p>
+                    <p className="mt-2">Name : {`${props.__clerk_ssr_state.user.firstName} ${props.__clerk_ssr_state.user.lastName}`}</p>
+                    <p className="mt-2">Email : {`${props.__clerk_ssr_state.user.emailAddresses[0].emailAddress} `}</p>
+                    {/* <p className="mt-2">College : YMCA Faridabad</p> */}
                   </div>
                 </div>
 
@@ -288,5 +280,23 @@ const Profile = () => {
     </div>
   );
 };
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  // Use `getAuth()` to get the user's ID
+  const { userId } = getAuth(ctx.req)
+
+  // Protect the route by checking if the user is signed in
+  if (!userId) {
+    // Handle when the user is not signed in
+  }
+
+  // Initialize the Backend SDK
+  const client = await clerkClient()
+
+  // Get the user's full `Backend User` object
+  const user = userId ? await client.users.getUser(userId) : undefined
+
+  return { props: { ...buildClerkProps(ctx.req, { user }) } }
+}
 
 export default Profile;
