@@ -7,6 +7,7 @@ import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import Link from "next/link";
 import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
+import Spline from '@splinetool/react-spline';
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -899,16 +900,22 @@ export default function Home() {
                 <SignInButton />
               </SignedOut>
       
-              <button
-                className="bg-indigo-600 text-white rounded-full cursor-pointer font-semibold text-center shadow-xs transition-all duration-500 py-3 px-6 text-sm lg:ml-5 hover:bg-indigo-700"
-              >
-                Sign up
-              </button>
+      <SignedIn>
+              <UserButton />
+            </SignedIn>
             </div>
           </div>
         </div>
       </div>
     </nav>
+
+    <div className="h-screen w-full">
+      <Spline
+        scene="https://prod.spline.design/64rr6dXy3jn-wu3N/scene.splinecode" 
+      />
+    </div>
+
+
     <section
       className="pt-8 lg:pt-32 bg-[url('https://pagedone.io/asset/uploads/1691055810.png')] bg-center bg-cover"
     >
