@@ -88,14 +88,14 @@ const Yt = (yt) => {
                         Watch
                       </a>
                       {/* The button to open modal */}
-                      <label htmlFor="my_modal_6" className=" ml-5 btn">
+                      <label htmlFor={yt.snippet.thumbnails.default.url} className=" ml-5 btn">
                         Get Summary
                       </label>
 
                       {/* Put this part before </body> tag */}
                       <input
                         type="checkbox"
-                        id="my_modal_6"
+                        id={yt.snippet.thumbnails.default.url}
                         className="modal-toggle"
                       />
                       <div className="modal" role="dialog">
@@ -106,7 +106,7 @@ const Yt = (yt) => {
                             <p className="mt-5">{yt.snippet.description}</p>
                           </div>
                           <div className="modal-action">
-                            <label htmlFor="my_modal_6" className="btn">
+                            <label htmlFor={yt.snippet.thumbnails.default.url}  className="btn">
                               Close!
                             </label>
                           </div>
