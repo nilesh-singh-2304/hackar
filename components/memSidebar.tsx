@@ -112,6 +112,12 @@ const MemSidebar = () => {
                <span className="ms-3">Youtube Support</span>
             </Link>
          </li>
+         <li>
+            <Link href="/member/collab" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-gray-500 hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 group">
+            <TfiYoutube className='scale-150' />
+               <span className="ms-3">Collab Space</span>
+            </Link>
+         </li>
          <div className="divider divider-neutral"></div>
          <li>
             <Link href="/member/community" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-gray-500 hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 group">
