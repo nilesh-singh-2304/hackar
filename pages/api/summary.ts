@@ -12,20 +12,18 @@ export default async function handler(
 
     const url = req.body.url
 
-    const options = {
+      const options = {
         method: 'GET',
-        url: 'https://article-extractor-and-summarizer.p.rapidapi.com/summarize',
+        url: 'https://ai-web-summary.p.rapidapi.com/api/WebSummary',
         params: {
-          url: url,
-          lang: 'en',
-          length : 5,
-          engine: '2'
+          url: url
         },
         headers: {
           'x-rapidapi-key': 'efdbb399d6msh78a4b7750642cc8p197564jsnff76aecec8b1',
-          'x-rapidapi-host': 'article-extractor-and-summarizer.p.rapidapi.com'
+          'x-rapidapi-host': 'ai-web-summary.p.rapidapi.com'
         }
       };
+      
           const response = await axios.request(options);
           console.log(response.data);
 

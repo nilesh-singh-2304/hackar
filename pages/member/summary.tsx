@@ -22,9 +22,9 @@ const Summary = () => {
         url: url,
       }
     );
-    console.log(res.data.data.summary);
+    console.log(res.data.data);
     setshow(true);
-    setresp(res.data.data.summary);
+    setresp(res.data.data);
   };
   return (
     <div>
