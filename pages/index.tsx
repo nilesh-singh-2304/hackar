@@ -463,7 +463,6 @@ export default function Home() {
             </div>
         </div>
       </header>
-
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative overflow-hidden border-b bg-background py-24 md:py-32">
