@@ -5,7 +5,10 @@ import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
-import Link from "next/link";
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { BookOpen, Users, ArrowRight, Sparkles, Lightbulb, Zap, ChevronRight } from "lucide-react"
 import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 import Spline from '@splinetool/react-spline';
 const inter = Inter({ subsets: ["latin"] });
@@ -425,6 +428,194 @@ export default function Home() {
    
 //    </>
 <div>
+
+
+<div className="flex min-h-screen flex-col">
+      <header className="sticky top-0 z-50 w-full border-b bg-gradient-to-r from-background to-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="container flex h-16 items-center justify-between">
+          <Link href="/" className="flex items-center gap-2 transition-opacity hover:opacity-90">
+            <div className="relative">
+              <BookOpen className="h-6 w-6 text-primary" />
+              <Sparkles className="absolute -right-1 -top-1 h-3.5 w-3.5 text-primary" />
+            </div>
+            <span className="text-xl font-bold tracking-tight">QuestEd</span>
+          </Link>
+          <div className="flex items-center gap-4">
+            <Button variant="ghost" className="text-sm font-medium" asChild>
+              <Link href="/login">Log in</Link>
+            </Button>
+            <Button className="rounded-full px-4 text-sm font-medium" asChild>
+              <Link href="/signup">Sign up</Link>
+            </Button>
+          </div>
+        </div>
+      </header>
+
+      <main className="flex-1">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden border-b bg-background py-24 md:py-32">
+          <div className="absolute inset-0 bg-grid-pattern opacity-[0.02] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black_70%)]"></div>
+          <div className="container relative">
+            <div className="mx-auto flex max-w-[980px] flex-col items-center gap-6 text-center">
+              <div className="inline-flex items-center rounded-full border bg-background px-3 py-1 text-sm">
+                <span className="mr-1 rounded-full bg-primary/20 px-1.5 py-0.5 text-xs font-medium text-primary">
+                  New
+                </span>
+                <span className="text-muted-foreground">AI-powered learning paths</span>
+                <ChevronRight className="ml-1 h-3.5 w-3.5 text-muted-foreground" />
+              </div>
+              <h1 className="text-4xl font-bold leading-tight tracking-tighter md:text-5xl lg:text-6xl lg:leading-[1.1]">
+                Learn Smarter with{" "}
+                <span className="bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+                  QuestEd
+                </span>
+              </h1>
+              <p className="max-w-[750px] text-lg text-muted-foreground md:text-xl">
+                Personalized learning experiences tailored to your unique needs. Master new skills at your own pace with
+                our intelligent tutoring system.
+              </p>
+              <div className="flex flex-col gap-4 sm:flex-row">
+                <Button size="lg" className="gap-2 rounded-full px-6">
+                  Get Started <ArrowRight className="h-4 w-4" />
+                </Button>
+                <Button size="lg" variant="outline" className="rounded-full px-6">
+                  Learn More
+                </Button>
+              </div>
+              <div className="mt-6 flex items-center gap-4 text-sm text-muted-foreground">
+                <div className="flex items-center gap-1">
+                  <Zap className="h-4 w-4 text-primary" />
+                  <span>10k+ Students</span>
+                </div>
+                <div className="h-1 w-1 rounded-full bg-muted-foreground/30"></div>
+                <div className="flex items-center gap-1">
+                  <Lightbulb className="h-4 w-4 text-primary" />
+                  <span>500+ Courses</span>
+                </div>
+                <div className="h-1 w-1 rounded-full bg-muted-foreground/30"></div>
+                <div className="flex items-center gap-1">
+                  <Users className="h-4 w-4 text-primary" />
+                  <span>Expert Mentors</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="container py-20 md:py-28">
+          <div className="mb-12 text-center">
+            <h2 className="mb-3 text-3xl font-bold tracking-tight md:text-4xl">Why Choose QuestEd?</h2>
+            <p className="mx-auto max-w-[700px] text-muted-foreground">
+              Our platform combines cutting-edge AI with proven educational methods to deliver an unmatched learning
+              experience.
+            </p>
+          </div>
+          <div className="grid gap-8 md:grid-cols-3">
+            <div className="group rounded-xl border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+              <div className="mb-5 inline-flex rounded-lg bg-primary/10 p-3 text-primary">
+                <Sparkles className="h-6 w-6" />
+              </div>
+              <h3 className="mb-2 text-xl font-semibold">Personalized Learning</h3>
+              <p className="mb-4 text-muted-foreground">
+                AI-driven content that adapts to your learning style and pace for maximum retention and engagement.
+              </p>
+              <Link href="#" className="inline-flex items-center text-sm font-medium text-primary">
+                Learn more <ChevronRight className="ml-1 h-3 w-3" />
+              </Link>
+            </div>
+            <div className="group rounded-xl border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+              <div className="mb-5 inline-flex rounded-lg bg-primary/10 p-3 text-primary">
+                <BookOpen className="h-6 w-6" />
+              </div>
+              <h3 className="mb-2 text-xl font-semibold">Extensive Library</h3>
+              <p className="mb-4 text-muted-foreground">
+                Access thousands of courses across various subjects and disciplines, updated regularly with new content.
+              </p>
+              <Link href="#" className="inline-flex items-center text-sm font-medium text-primary">
+                Browse courses <ChevronRight className="ml-1 h-3 w-3" />
+              </Link>
+            </div>
+            <div className="group rounded-xl border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+              <div className="mb-5 inline-flex rounded-lg bg-primary/10 p-3 text-primary">
+                <Users className="h-6 w-6" />
+              </div>
+              <h3 className="mb-2 text-xl font-semibold">Community Learning</h3>
+              <p className="mb-4 text-muted-foreground">
+                Connect with peers and experts to enhance your educational journey through collaborative projects.
+              </p>
+              <Link href="#" className="inline-flex items-center text-sm font-medium text-primary">
+                Join community <ChevronRight className="ml-1 h-3 w-3" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="relative overflow-hidden bg-muted py-20 md:py-28">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-background/0"></div>
+          <div className="container relative">
+            <div className="mx-auto max-w-[800px] rounded-2xl border bg-card p-8 shadow-lg md:p-12">
+              <div className="text-center">
+                <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
+                  Ready to transform your learning?
+                </h2>
+                <p className="mb-8 text-muted-foreground md:text-lg">
+                  Join thousands of students already experiencing the future of education with QuestEd.
+                </p>
+                <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+                  <div className="w-full max-w-sm">
+                    <Input
+                      type="email"
+                      placeholder="Enter your email"
+                      className="h-12 rounded-full border-muted-foreground/20 px-4"
+                    />
+                  </div>
+                  <Button size="lg" className="h-12 rounded-full px-6">
+                    Get Started Free
+                  </Button>
+                </div>
+                <p className="mt-4 text-xs text-muted-foreground">No credit card required. Free 14-day trial.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer className="border-t py-8 md:py-12">
+        <div className="container">
+          <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
+            <div className="flex items-center gap-2">
+              <div className="relative">
+                <BookOpen className="h-5 w-5 text-primary" />
+                <Sparkles className="absolute -right-1 -top-1 h-3 w-3 text-primary" />
+              </div>
+              <span className="text-sm font-bold">QuestEd</span>
+            </div>
+            <div className="flex flex-wrap justify-center gap-8">
+              <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground">
+                About
+              </Link>
+              <Link href="/courses" className="text-sm text-muted-foreground hover:text-foreground">
+                Courses
+              </Link>
+              <Link href="/pricing" className="text-sm text-muted-foreground hover:text-foreground">
+                Pricing
+              </Link>
+              <Link href="/blog" className="text-sm text-muted-foreground hover:text-foreground">
+                Blog
+              </Link>
+              <Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground">
+                Contact
+              </Link>
+            </div>
+            <p className="text-center text-sm text-muted-foreground">
+              © {new Date().getFullYear()} QuestEd. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
    <nav
       className="py-5 border-b-default border-solid border-gray-200 z-10 w-full bg-inherit lg:fixed"
       id="topnav"
