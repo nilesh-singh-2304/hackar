@@ -18,617 +18,9 @@ export default function Home() {
 
 
   return (
-//    <>
-//    {/* <div >
-//    <Navbar/>
-//     <div className="font-sans max-w-7xl max-md:max-w-md mx-auto">
-//       <div className="grid md:ml-16 md:grid-cols-2 mt-5 items-center md:gap-8 gap-6">
-//         <div className="max-md:order-1 max-md:text-center mt-8 z-50 relative">
-//           <h2 className="text-gray-800 lg:text-6xl md:text-5xl text-3xl font-extrabold mb-4 md:!leading-[56px]"><span className="text-blue-600">Smart</span> Business with <span className="text-blue-600">Smart</span> People</h2>
-//           <p className="text-gray-600 mt-6 text-base leading-relaxed">Laboris qui Lorem ad tempor ut reprehenderit. Nostrud anim nulla officia ea sit deserunt. Eu eu quis anim aute Laboris qui Lorem ad tempor ut reprehenderit.</p>
-
-//           <button type='button'
-//             className="mt-6 bg-blue-600 hover:bg-transparent hover:text-blue-600 border-2 border-blue-600 transition-all text-white font-semibold text-sm tracking-wide rounded-md px-6 py-2.5">Get Started</button>
-
-//           <div className="mt-12">
-//             <div className="grid sm:grid-cols-3 gap-4 items-center">
-//               <div className="flex flex-col items-center text-center">
-//                 <h5 className="text-gray-800 font-bold text-xl mb-2">10+</h5>
-//                 <p className="text-gray-600">Years Experience</p>
-//               </div>
-//               <div className="flex flex-col items-center text-center">
-//                 <h5 className="text-gray-800 font-bold text-xl mb-2">890</h5>
-//                 <p className="text-gray-600">Cases Solved</p>
-//               </div>
-//               <div className="flex flex-col items-center text-center">
-//                 <h5 className="text-gray-800 font-bold text-xl mb-2">250</h5>
-//                 <p className="text-gray-600">Business Partners</p>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-
-//         <img src="https://www.stellarisvp.com/wp-content/uploads/2022/11/Mar2019_blog_Edtech.png" className="rounded-md lg:w-4/5 mb-8 z-50 relative" alt="Dining Experience" />
-//       </div>
-
-//       <div className="grid md:grid-cols-3 gap-4 z-50 relative md:px-4 max-md:mt-12 mb-12">
-//         <div className="bg-white p-6 shadow rounded-md">
-//           <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-11 h-11 mb-4 inline-block bg-blue-100 p-3 rounded-md" viewBox="0 0 32 32">
-//             <path d="M28.068 12h-.128a.934.934 0 0 1-.864-.6.924.924 0 0 1 .2-1.01l.091-.091a2.938 2.938 0 0 0 0-4.147l-1.511-1.51a2.935 2.935 0 0 0-4.146 0l-.091.091A.956.956 0 0 1 20 4.061v-.129A2.935 2.935 0 0 0 17.068 1h-2.136A2.935 2.935 0 0 0 12 3.932v.129a.956.956 0 0 1-1.614.668l-.086-.091a2.935 2.935 0 0 0-4.146 0l-1.516 1.51a2.938 2.938 0 0 0 0 4.147l.091.091a.935.935 0 0 1 .185 1.035.924.924 0 0 1-.854.579h-.128A2.935 2.935 0 0 0 1 14.932v2.136A2.935 2.935 0 0 0 3.932 20h.128a.934.934 0 0 1 .864.6.924.924 0 0 1-.2 1.01l-.091.091a2.938 2.938 0 0 0 0 4.147l1.51 1.509a2.934 2.934 0 0 0 4.147 0l.091-.091a.936.936 0 0 1 1.035-.185.922.922 0 0 1 .579.853v.129A2.935 2.935 0 0 0 14.932 31h2.136A2.935 2.935 0 0 0 20 28.068v-.129a.956.956 0 0 1 1.614-.668l.091.091a2.935 2.935 0 0 0 4.146 0l1.511-1.509a2.938 2.938 0 0 0 0-4.147l-.091-.091a.935.935 0 0 1-.185-1.035.924.924 0 0 1 .854-.58h.128A2.935 2.935 0 0 0 31 17.068v-2.136A2.935 2.935 0 0 0 28.068 12ZM29 17.068a.933.933 0 0 1-.932.932h-.128a2.956 2.956 0 0 0-2.083 5.028l.09.091a.934.934 0 0 1 0 1.319l-1.511 1.509a.932.932 0 0 1-1.318 0l-.09-.091A2.957 2.957 0 0 0 18 27.939v.129a.933.933 0 0 1-.932.932h-2.136a.933.933 0 0 1-.932-.932v-.129a2.951 2.951 0 0 0-5.028-2.082l-.091.091a.934.934 0 0 1-1.318 0l-1.51-1.509a.934.934 0 0 1 0-1.319l.091-.091A2.956 2.956 0 0 0 4.06 18h-.128A.933.933 0 0 1 3 17.068v-2.136A.933.933 0 0 1 3.932 14h.128a2.956 2.956 0 0 0 2.083-5.028l-.09-.091a.933.933 0 0 1 0-1.318l1.51-1.511a.932.932 0 0 1 1.318 0l.09.091A2.957 2.957 0 0 0 14 4.061v-.129A.933.933 0 0 1 14.932 3h2.136a.933.933 0 0 1 .932.932v.129a2.956 2.956 0 0 0 5.028 2.082l.091-.091a.932.932 0 0 1 1.318 0l1.51 1.511a.933.933 0 0 1 0 1.318l-.091.091A2.956 2.956 0 0 0 27.94 14h.128a.933.933 0 0 1 .932.932Z" data-original="#000000" />
-//             <path d="M16 9a7 7 0 1 0 7 7 7.008 7.008 0 0 0-7-7Zm0 12a5 5 0 1 1 5-5 5.006 5.006 0 0 1-5 5Z" data-original="#000000" />
-//           </svg>
-//           <h3 className="text-gray-800 text-xl font-bold mb-2">Customization</h3>
-//           <p className="text-sm text-gray-600">Tailor our product to suit your needs.</p>
-//           <a href="javascript:void(0);" className="text-blue-600 font-bold inline-block text-sm hover:underline mt-4">Learn more</a>
-//         </div>
-//         <div className="bg-white p-6 shadow rounded-md">
-//           <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-11 h-11 mb-4 inline-block bg-blue-100 p-3 rounded-md" viewBox="0 0 512.001 512.001">
-//             <path d="M271.029 0c-33.091 0-61 27.909-61 61s27.909 61 61 61 60-27.909 60-61-26.909-61-60-61zm66.592 122c-16.485 18.279-40.096 30-66.592 30-26.496 0-51.107-11.721-67.592-30-14.392 15.959-23.408 36.866-23.408 60v15c0 8.291 6.709 15 15 15h151c8.291 0 15-6.709 15-15v-15c0-23.134-9.016-44.041-23.408-60zM144.946 460.404 68.505 307.149c-7.381-14.799-25.345-20.834-40.162-13.493l-19.979 9.897c-7.439 3.689-10.466 12.73-6.753 20.156l90 180c3.701 7.423 12.704 10.377 20.083 6.738l19.722-9.771c14.875-7.368 20.938-25.417 13.53-40.272zM499.73 247.7c-12.301-9-29.401-7.2-39.6 3.9l-82 100.8c-5.7 6-16.5 9.6-22.2 9.6h-69.901c-8.401 0-15-6.599-15-15s6.599-15 15-15h60c16.5 0 30-13.5 30-30s-13.5-30-30-30h-78.6c-7.476 0-11.204-4.741-17.1-9.901-23.209-20.885-57.949-30.947-93.119-22.795-19.528 4.526-32.697 12.415-46.053 22.993l-.445-.361-21.696 19.094L174.28 452h171.749c28.2 0 55.201-13.5 72.001-36l87.999-126c9.9-13.201 7.2-32.399-6.299-42.3z" data-original="#000000" />
-//           </svg>
-//           <h3 className="text-gray-800 text-xl font-bold mb-2">Support</h3>
-//           <p className="text-sm text-gray-600">24/7 customer support htmlFor all your inquiries.</p>
-//           <a href="javascript:void(0);" className="text-blue-600 font-bold inline-block text-sm hover:underline mt-4">Learn more</a>
-//         </div>
-//         <div className="bg-white p-6 shadow rounded-md">
-//           <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-11 h-11 mb-4 inline-block bg-blue-100 p-3 rounded-md" viewBox="0 0 24 24">
-//             <g fill-rule="evenodd" clip-rule="evenodd">
-//               <path d="M17.03 8.97a.75.75 0 0 1 0 1.06l-4.2 4.2a.75.75 0 0 1-1.154-.114l-1.093-1.639L8.03 15.03a.75.75 0 0 1-1.06-1.06l3.2-3.2a.75.75 0 0 1 1.154.114l1.093 1.639L15.97 8.97a.75.75 0 0 1 1.06 0z" data-original="#000000" />
-//               <path d="M13.75 9.5a.75.75 0 0 1 .75-.75h2a.75.75 0 0 1 .75.75v2a.75.75 0 0 1-1.5 0v-1.25H14.5a.75.75 0 0 1-.75-.75z" data-original="#000000" />
-//               <path d="M3.095 3.095C4.429 1.76 6.426 1.25 9 1.25h6c2.574 0 4.57.51 5.905 1.845C22.24 4.429 22.75 6.426 22.75 9v6c0 2.574-.51 4.57-1.845 5.905C19.571 22.24 17.574 22.75 15 22.75H9c-2.574 0-4.57-.51-5.905-1.845C1.76 19.571 1.25 17.574 1.25 15V9c0-2.574.51-4.57 1.845-5.905zm1.06 1.06C3.24 5.071 2.75 6.574 2.75 9v6c0 2.426.49 3.93 1.405 4.845.916.915 2.419 1.405 4.845 1.405h6c2.426 0 3.93-.49 4.845-1.405.915-.916 1.405-2.419 1.405-4.845V9c0-2.426-.49-3.93-1.405-4.845C18.929 3.24 17.426 2.75 15 2.75H9c-2.426 0-3.93.49-4.845 1.405z" data-original="#000000" />
-//             </g>
-//           </svg>
-//           <h3 className="text-gray-800 text-xl font-bold mb-2">Performance</h3>
-//           <p className="text-sm text-gray-600">Experience blazing-fast performance with our product.</p>
-//           <a href="javascript:void(0);" className="text-blue-600 font-bold inline-block text-sm hover:underline mt-4">Learn more</a>
-//         </div>
-//       </div>
-//     </div>
-
-   
-
-//     <div className=" py-6 sm:py-8 lg:py-12">
-//   <div className="mx-auto max-w-screen-lg px-4 md:px-8">
-    
-//     <div className="mb-10 md:mb-16">
-//       <h2 className="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">Choose a Bundle</h2>
-
-//       <p className="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random or otherwise generated.</p>
-//     </div>
-    
-
-//     <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-0">
-      
-//       <div className="w-full rounded-lg bg-gray-800 p-6 sm:w-1/2 sm:rounded-r-none sm:p-8 lg:w-1/3">
-//         <div className="mb-4">
-//           <h3 className="text-2xl font-semibold text-gray-100 sm:text-3xl">Basic Bundle</h3>
-//           <p className="text-gray-300">Ebook</p>
-//         </div>
-
-//         <div className="mb-4 space-x-2">
-//           <span className="text-4xl font-bold text-gray-100">$29</span>
-//           <span className="text-2xl text-gray-300 line-through">$49</span>
-//         </div>
-
-//         <ul className="mb-6 space-y-2 text-gray-300">
-          
-//           <li className="flex items-center gap-1.5">
-//             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 shrink-0" viewBox="0 0 20 20" fill="currentColor">
-//               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-//             </svg>
-
-//             <span>Ebook</span>
-//           </li>
-          
-//           <li className="flex items-center gap-1.5">
-//             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 shrink-0" viewBox="0 0 20 20" fill="currentColor">
-//               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-//             </svg>
-
-//             <span>Multiple examples</span>
-//           </li>
-          
-//           <li className="flex items-center gap-1.5">
-//             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 shrink-0" viewBox="0 0 20 20" fill="currentColor">
-//               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-//             </svg>
-
-//             <span>Basic support</span>
-//           </li>
-          
-//         </ul>
-
-//         <a href="#" className="block rounded-lg bg-gray-500 px-8 py-3 text-center text-sm font-semibold text-gray-100 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-600 focus-visible:ring active:text-gray-300 md:text-base">Get the Basic Bundle</a>
-//       </div>
-      
-//       <div className="w-full rounded-lg bg-gradient-to-tr from-indigo-500 to-violet-400 p-6 shadow-xl sm:w-1/2 sm:p-8">
-//         <div className="mb-4 flex flex-col items-start justify-between gap-4 lg:flex-row">
-//           <div>
-//             <h3 className="text-2xl font-semibold text-white sm:text-3xl">Pro Bundle</h3>
-//             <p className="text-indigo-100">Ebook + Video course</p>
-//           </div>
-
-//           <span className="order-first inline-block rounded-full bg-indigo-200 bg-opacity-50 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white lg:order-none">Best value</span>
-//         </div>
-
-//         <div className="mb-4 space-x-2">
-//           <span className="text-4xl font-bold text-white">$49</span>
-//           <span className="text-2xl text-indigo-100 line-through">$89</span>
-//         </div>
-
-//         <ul className="mb-6 space-y-2 text-indigo-100">
-          
-//           <li className="flex items-center gap-1.5">
-//             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 shrink-0" viewBox="0 0 20 20" fill="currentColor">
-//               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-//             </svg>
-
-//             <span>Ebook</span>
-//           </li>
-          
-//           <li className="flex items-center gap-1.5">
-//             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 shrink-0" viewBox="0 0 20 20" fill="currentColor">
-//               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-//             </svg>
-
-//             <span>Video course</span>
-//           </li>
-          
-//           <li className="flex items-center gap-1.5">
-//             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 shrink-0" viewBox="0 0 20 20" fill="currentColor">
-//               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-//             </svg>
-
-//             <span>Multiple examples</span>
-//           </li>
-          
-//           <li className="flex items-center gap-1.5">
-//             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 shrink-0" viewBox="0 0 20 20" fill="currentColor">
-//               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-//             </svg>
-
-//             <span>Work sheets</span>
-//           </li>
-          
-//           <li className="flex items-center gap-1.5">
-//             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 shrink-0" viewBox="0 0 20 20" fill="currentColor">
-//               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-//             </svg>
-
-//             <span>Premium support</span>
-//           </li>
-          
-//         </ul>
-
-//         <a href="#" className="block rounded-lg bg-indigo-200 bg-opacity-50 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-300 focus-visible:ring active:bg-indigo-400 md:text-base">Get the Pro Bundle</a>
-//       </div>
-      
-//     </div>
-//   </div>
-// </div>
-
-
-
-// <div className="font-[sans-serif] px-6 py-16 ">
-//       <div className="text-center max-w-3xl max-md:max-w-md mx-auto">
-//         <p className="text-sm font-bold text-blue-600 mb-4"><span className="rotate-90 inline-block mr-2">|</span> ALL IN ONE IN READYMADEUI</p>
-//         <h2 className="text-gray-800 md:text-5xl text-3xl font-extrabold md:!leading-[55px]">Call To Action Section, Elevate Your Experience</h2>
-//         <div className="mt-8">
-//           <p className="text-base text-gray-500 leading-relaxed">Upgrade to our premium plan and unlock a world of possibilities. Enjoy exclusive features, enhanced performance, and a seamless journey towards success.</p>
-//         </div>
-
-//         <div className="bg-white mt-12 flex px-1 py-1.5 rounded-full shadow-[0_5px_22px_-8px_rgba(93,96,127,0.2)] md:w-4/5 mx-auto overflow-hidden">
-//           <input type='email' placeholder='Enter your email' className="w-full outline-none bg-white pl-4 text-gray-800 text-sm" />
-//           <button type='button'
-//             className="bg-blue-600 hover:bg-blue-700 transition-all text-white text-sm rounded-full px-4 py-2.5">Subscribe</button>
-//         </div>
-//       </div>
-//     </div>
-
-
-   
-
-//     <div className="flex flex-col justify-center items-center w-fit mt-10">
-//         <p className="text-white text-3xl font-extrabold text-center">Our Alumni</p>
-//         <div className="embla " ref={emblaRef}>
-          
-//       <div className="embla__container w-auto text-center h-auto">
-//         <div className="embla__slide">
-//         <div className="max-w-4xl bg-gray-800 rounded-xl border border-gray-700 mx-auto p-16 my-5 font-[sans-serif]">
-
-//           <div className="grid md:grid-cols-3 items-center gap-12">
-//               <div>
-//                   <img src='https://readymadeui.com/profile_5.webp' className="w-[280px] rounded-lg shadow-[-20px_20px_0px_rgba(23,219,220,1)]" />
-//               </div>
-
-//               <div className="md:col-span-2">
-//                   <svg xmlns="http://www.w3.org/2000/svg" className="w-8 fill-secondary inline rotate-180" viewBox="0 0 475.082 475.081">
-//                       <path d="M164.454 36.547H54.818c-15.229 0-28.171 5.33-38.832 15.987C5.33 63.193 0 76.135 0 91.365v109.632c0 15.229 5.327 28.169 15.986 38.826 10.66 10.656 23.606 15.988 38.832 15.988h63.953c7.611 0 14.084 2.666 19.414 7.994 5.33 5.325 7.994 11.8 7.994 19.417v9.131c0 20.177-7.139 37.397-21.413 51.675-14.275 14.271-31.499 21.409-51.678 21.409h-18.27c-4.952 0-9.233 1.813-12.851 5.427-3.615 3.614-5.424 7.898-5.424 12.847v36.549c0 4.941 1.809 9.233 5.424 12.848 3.621 3.613 7.898 5.427 12.851 5.427h18.271c19.797 0 38.688-3.86 56.676-11.566 17.987-7.707 33.546-18.131 46.68-31.265 13.131-13.135 23.553-28.691 31.261-46.679 7.707-17.987 11.562-36.877 11.562-56.671V91.361c0-15.23-5.33-28.171-15.987-38.828s-23.602-15.986-38.827-15.986zm294.635 15.987c-10.656-10.657-23.599-15.987-38.828-15.987H310.629c-15.229 0-28.171 5.33-38.828 15.987-10.656 10.66-15.984 23.601-15.984 38.831v109.632c0 15.229 5.328 28.169 15.984 38.826 10.657 10.656 23.6 15.988 38.828 15.988h63.953c7.611 0 14.089 2.666 19.418 7.994 5.324 5.328 7.994 11.8 7.994 19.417v9.131c0 20.177-7.139 37.397-21.416 51.675-14.274 14.271-31.494 21.409-51.675 21.409h-18.274c-4.948 0-9.233 1.813-12.847 5.427-3.617 3.614-5.428 7.898-5.428 12.847v36.549c0 4.941 1.811 9.233 5.428 12.848 3.613 3.613 7.898 5.427 12.847 5.427h18.274c19.794 0 38.684-3.86 56.674-11.566 17.984-7.707 33.541-18.131 46.676-31.265 13.134-13.135 23.562-28.695 31.265-46.679 7.706-17.983 11.563-36.877 11.563-56.671V91.361c-.003-15.23-5.328-28.171-15.992-38.827z" data-original="#000000"></path>
-//                   </svg>
-
-//                   <p className="text-gray-50 text-sm mt-6 leading-relaxed">Veniam proident aute magna anim excepteur et ex consectetur velit ullamco veniam minim aute sit. Elit occaecat officia et laboris Lorem minim. Officia do aliqua adipisicing ullamco in.</p>
-
-
-//                   <div className="mt-4">
-//                       <p className="text-gray-50 text-base font-semibold">Simon Konecki</p>
-//                       <p className="text-xs text-gray-400 mt-0.5">Founder of Labar</p>
-//                   </div>
-
-//                   <div className="flex justify-end mt-4 space-x-4">
-//                       <div className="bg-info text-white text-2xl w-10 h-10 grid items-center justify-center rounded-full shrink-0 cursor-pointer">
-                      
-//                       </div>
-//                       <div className="bg-secondary text-white text-2xl w-10 h-10 grid items-center justify-center rounded-full -rotate-90 shrink-0 cursor-pointer">
-                      
-//                       </div>
-//                   </div>
-//               </div>
-//           </div>
-//       </div>
-//         </div>
-//         <div className="embla__slide">
-//         <div className="max-w-4xl bg-gray-800 rounded-xl border border-gray-700 mx-auto p-16 my-5 font-[sans-serif]">
-
-//           <div className="grid md:grid-cols-3 items-center gap-12">
-//               <div>
-//                   <img src='https://readymadeui.com/profile_5.webp' className="w-[280px] rounded-lg shadow-[-20px_20px_0px_rgba(23,219,220,1)]" />
-//               </div>
-
-//               <div className="md:col-span-2">
-//                   <svg xmlns="http://www.w3.org/2000/svg" className="w-8 fill-secondary inline rotate-180" viewBox="0 0 475.082 475.081">
-//                       <path d="M164.454 36.547H54.818c-15.229 0-28.171 5.33-38.832 15.987C5.33 63.193 0 76.135 0 91.365v109.632c0 15.229 5.327 28.169 15.986 38.826 10.66 10.656 23.606 15.988 38.832 15.988h63.953c7.611 0 14.084 2.666 19.414 7.994 5.33 5.325 7.994 11.8 7.994 19.417v9.131c0 20.177-7.139 37.397-21.413 51.675-14.275 14.271-31.499 21.409-51.678 21.409h-18.27c-4.952 0-9.233 1.813-12.851 5.427-3.615 3.614-5.424 7.898-5.424 12.847v36.549c0 4.941 1.809 9.233 5.424 12.848 3.621 3.613 7.898 5.427 12.851 5.427h18.271c19.797 0 38.688-3.86 56.676-11.566 17.987-7.707 33.546-18.131 46.68-31.265 13.131-13.135 23.553-28.691 31.261-46.679 7.707-17.987 11.562-36.877 11.562-56.671V91.361c0-15.23-5.33-28.171-15.987-38.828s-23.602-15.986-38.827-15.986zm294.635 15.987c-10.656-10.657-23.599-15.987-38.828-15.987H310.629c-15.229 0-28.171 5.33-38.828 15.987-10.656 10.66-15.984 23.601-15.984 38.831v109.632c0 15.229 5.328 28.169 15.984 38.826 10.657 10.656 23.6 15.988 38.828 15.988h63.953c7.611 0 14.089 2.666 19.418 7.994 5.324 5.328 7.994 11.8 7.994 19.417v9.131c0 20.177-7.139 37.397-21.416 51.675-14.274 14.271-31.494 21.409-51.675 21.409h-18.274c-4.948 0-9.233 1.813-12.847 5.427-3.617 3.614-5.428 7.898-5.428 12.847v36.549c0 4.941 1.811 9.233 5.428 12.848 3.613 3.613 7.898 5.427 12.847 5.427h18.274c19.794 0 38.684-3.86 56.674-11.566 17.984-7.707 33.541-18.131 46.676-31.265 13.134-13.135 23.562-28.695 31.265-46.679 7.706-17.983 11.563-36.877 11.563-56.671V91.361c-.003-15.23-5.328-28.171-15.992-38.827z" data-original="#000000"></path>
-//                   </svg>
-
-//                   <p className="text-gray-50 text-sm mt-6 leading-relaxed">Veniam proident aute magna anim excepteur et ex consectetur velit ullamco veniam minim aute sit. Elit occaecat officia et laboris Lorem minim. Officia do aliqua adipisicing ullamco in.</p>
-
-
-//                   <div className="mt-4">
-//                       <p className="text-gray-50 text-base font-semibold">Simon Konecki</p>
-//                       <p className="text-xs text-gray-400 mt-0.5">Founder of Labar</p>
-//                   </div>
-
-//                   <div className="flex justify-end mt-4 space-x-4">
-//                       <div className="bg-info text-white text-2xl w-10 h-10 grid items-center justify-center rounded-full shrink-0 cursor-pointer">
-                      
-//                       </div>
-//                       <div className="bg-secondary text-white text-2xl w-10 h-10 grid items-center justify-center rounded-full -rotate-90 shrink-0 cursor-pointer">
-                     
-//                       </div>
-//                   </div>
-//               </div>
-//           </div>
-//       </div>
-//         </div>
-//       </div>
-//     </div>
-//         </div>
-
-        
-
-//         <div className=" px-4 py-10 font-[sans-serif]">
-//       <div className="max-w-7xl max-md:max-w-lg mx-auto">
-//         <h2 className="text-3xl font-extrabold text-[#333]">LATEST BLOGS</h2>
-//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-//           <div className="bg-white cursor-pointer rounded overflow-hidden group">
-//             <div className="relative overflow-hidden">
-//               <img src="https://readymadeui.com/Imagination.webp" alt="Blog Post 1" className="w-full h-60 object-cover group-hover:scale-125 transition-all duration-300" />
-//               <div className="px-4 py-2.5 text-white text-sm tracking-wider bg-orange-500 absolute bottom-0 right-0">June 10, 2023</div>
-//             </div>
-//             <div className="p-6">
-//               <h3 className="text-xl font-bold text-[#333]">A Guide to Igniting Your Imagination</h3>
-//               <button type="button" className="px-4 py-2 mt-6 rounded text-white text-sm tracking-wider border-none outline-none bg-orange-500 hover:bg-orange-600">Read More</button>
-//             </div>
-//           </div>
-//           <div className="bg-white cursor-pointer rounded overflow-hidden group">
-//             <div className="relative overflow-hidden">
-//               <img src="https://readymadeui.com/hacks-watch.webp" alt="Blog Post 2" className="w-full h-60 object-cover group-hover:scale-125 transition-all duration-300" />
-//               <div className="px-4 py-2.5 text-white text-sm tracking-wider bg-orange-500 absolute bottom-0 right-0">April 20, 2023</div>
-//             </div>
-//             <div className="p-6">
-//               <h3 className="text-xl font-bold text-[#333]">Hacks to Supercharge Your Day</h3>
-//               <button type="button" className="px-4 py-2 mt-6 rounded text-white text-sm tracking-wider border-none outline-none bg-orange-500 hover:bg-orange-600">Read More</button>
-//             </div>
-//           </div>
-//           <div className="bg-white cursor-pointer rounded overflow-hidden group">
-//             <div className="relative overflow-hidden">
-//               <img src="https://readymadeui.com/prediction.webp" alt="Blog Post 3" className="w-full h-60 object-cover group-hover:scale-125 transition-all duration-300" />
-//               <div className="px-4 py-2.5 text-white text-sm tracking-wider bg-orange-500 absolute bottom-0 right-0">August 16, 2023</div>
-//             </div>
-//             <div className="p-6">
-//               <h3 className="text-xl font-bold text-[#333]">Trends and Predictions</h3>
-//               <button type="button" className="px-4 py-2 mt-6 rounded text-white text-sm tracking-wider border-none outline-none bg-orange-500 hover:bg-orange-600">Read More</button>
-//             </div>
-//           </div>
-//           <div className="bg-white cursor-pointer rounded overflow-hidden group">
-//             <div className="relative overflow-hidden">
-//               <img src="https://readymadeui.com/prediction.webp" alt="Blog Post 3" className="w-full h-60 object-cover group-hover:scale-125 transition-all duration-300" />
-//               <div className="px-4 py-2.5 text-white text-sm tracking-wider bg-orange-500 absolute bottom-0 right-0">August 16, 2023</div>
-//             </div>
-//             <div className="p-6">
-//               <h3 className="text-xl font-bold text-[#333]">Trends and Predictions</h3>
-//               <button type="button" className="px-4 py-2 mt-6 rounded text-white text-sm tracking-wider border-none outline-none bg-orange-500 hover:bg-orange-600">Read More</button>
-//             </div>
-//           </div>
-//           <div className="bg-white cursor-pointer rounded overflow-hidden group">
-//             <div className="relative overflow-hidden">
-//               <img src="https://readymadeui.com/prediction.webp" alt="Blog Post 3" className="w-full h-60 object-cover group-hover:scale-125 transition-all duration-300" />
-//               <div className="px-4 py-2.5 text-white text-sm tracking-wider bg-orange-500 absolute bottom-0 right-0">August 16, 2023</div>
-//             </div>
-//             <div className="p-6">
-//               <h3 className="text-xl font-bold text-[#333]">Trends and Predictions</h3>
-//               <button type="button" className="px-4 py-2 mt-6 rounded text-white text-sm tracking-wider border-none outline-none bg-orange-500 hover:bg-orange-600">Read More</button>
-//             </div>
-//           </div>
-//           <div className="bg-white cursor-pointer rounded overflow-hidden group">
-//             <div className="relative overflow-hidden">
-//               <img src="https://readymadeui.com/prediction.webp" alt="Blog Post 3" className="w-full h-60 object-cover group-hover:scale-125 transition-all duration-300" />
-//               <div className="px-4 py-2.5 text-white text-sm tracking-wider bg-orange-500 absolute bottom-0 right-0">August 16, 2023</div>
-//             </div>
-//             <div className="p-6">
-//               <h3 className="text-xl font-bold text-[#333]">Trends and Predictions</h3>
-//               <button type="button" className="px-4 py-2 mt-6 rounded text-white text-sm tracking-wider border-none outline-none bg-orange-500 hover:bg-orange-600">Read More</button>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-
-
-    
-
-//     <div className="my-4 font-[sans-serif] max-w-6xl max-md:max-w-lg mx-auto">
-//       <div className="md:mb-28 mb-12 text-center">
-//         <h2 className="text-gray-800 text-3xl font-extrabold">What our happy client say</h2>
-//       </div>
-
-//       <div className="grid md:grid-cols-3 gap-6 relative">
-//         <div
-//           className="bg-gradient-to-tr from-[#caf0f8] via-[#ade8f4] to-[#90e0ef] max-w-[65%] h-[145%] w-full -top-16 left-0 right-0 mx-auto rounded-3xl absolute max-md:hidden">
-//         </div>
-
-//         <div className="h-auto p-6 rounded-2xl mx-auto bg-white relative max-md:shadow-md">
-//           <div>
-//             <img src="https://readymadeui.com/profile_2.webp" className="w-10 h-10 rounded-full" />
-//             <h4 className="text-gray-800 text-sm whitespace-nowrap font-bold mt-3">John Doe</h4>
-//             <p className="mt-0.5 text-xs text-gray-600">Founder of Rubik</p>
-//           </div>
-//           <div className="mt-4">
-//             <p className="text-gray-600 text-sm leading-relaxed">The service was amazing. I never had to wait that long htmlFor my food.
-//               The staff was friendly and attentive, and the delivery was impressively prompt.</p>
-//           </div>
-//         </div>
-
-//         <div className="h-auto p-6 rounded-2xl mx-auto bg-white relative max-md:shadow-md">
-//           <div>
-//             <img src="https://readymadeui.com/profile_3.webp" className="w-10 h-10 rounded-full" />
-//             <h4 className="text-gray-800 text-sm whitespace-nowrap font-bold mt-3">Mark Adair</h4>
-//             <p className="mt-0.5 text-xs text-gray-600">Founder of Alpha</p>
-//           </div>
-//           <div className="mt-4">
-//             <p className="text-gray-600 text-sm leading-relaxed">The service was amazing. I never had to wait that long htmlFor my food.
-//               The staff was friendly and attentive, and the delivery was impressively prompt.</p>
-//           </div>
-//         </div>
-
-//         <div className="h-auto p-6 rounded-2xl mx-auto bg-white relative max-md:shadow-md">
-//           <div>
-//             <img src="https://readymadeui.com/profile_4.webp" className="w-10 h-10 rounded-full" />
-//             <h4 className="text-gray-800 text-sm whitespace-nowrap font-bold mt-3">Simon Konecki</h4>
-//             <p className="mt-0.5 text-xs text-gray-600">Founder of Labar</p>
-//           </div>
-//           <div className="mt-4">
-//             <p className="text-gray-600 text-sm leading-relaxed">The service was amazing. I never had to wait that long htmlFor my food.
-//               The staff was friendly and attentive, and the delivery was impressively prompt.</p>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-
-//     <Footer/>
-//    </div> */}
-   
-//    </>
 <div>
 
-
-<div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-50 w-full border-b bg-gradient-to-r from-background to-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 transition-opacity hover:opacity-90">
-            <div className="relative">
-              <BookOpen className="h-6 w-6 text-primary" />
-              <Sparkles className="absolute -right-1 -top-1 h-3.5 w-3.5 text-primary" />
-            </div>
-            <span className="text-xl font-bold tracking-tight">QuestEd</span>
-          </Link>
-          {/* <div className="flex items-center gap-4">
-            <Button variant="ghost" className="text-sm font-medium" asChild>
-              <Link href="/login">Log in</Link>
-            </Button>
-            <Button className="rounded-full px-4 text-sm font-medium" asChild>
-              <Link href="/signup">Sign up</Link>
-            </Button>
-          </div> */}
-          <div
-              className="flex lg:items-center justify-start flex-col lg:flex-row max-lg:gap-4 lg:flex-1 lg:justify-end"
-            >
-              <SignedOut>
-                <button className="btn btn-sm btn bg-black text-white"><SignInButton /></button>
-                <button className="btn ml-2 btn-sm btn bg-black text-white">Sign-up</button>
-              </SignedOut>
-      
-      <SignedIn>
-              <UserButton />
-             <Link href={"/member"}><button className="btn ml-2 btn-sm btn bg-black text-white">Member</button></Link> 
-            </SignedIn>
-            </div>
-        </div>
-      </header>
-      <main className="flex-1">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden border-b bg-background py-24 md:py-32">
-          <div className="absolute inset-0 bg-grid-pattern opacity-[0.02] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black_70%)]"></div>
-          <div className="container relative">
-            <div className="mx-auto flex max-w-[980px] flex-col items-center gap-6 text-center">
-              <div className="inline-flex items-center rounded-full border bg-background px-3 py-1 text-sm">
-                <span className="mr-1 rounded-full bg-primary/20 px-1.5 py-0.5 text-xs font-medium text-primary">
-                  New
-                </span>
-                <span className="text-muted-foreground">AI-powered learning paths</span>
-                <ChevronRight className="ml-1 h-3.5 w-3.5 text-muted-foreground" />
-              </div>
-              <h1 className="text-4xl font-bold leading-tight tracking-tighter md:text-5xl lg:text-6xl lg:leading-[1.1]">
-                Learn Smarter with{" "}
-                <span className="bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
-                  QuestEd
-                </span>
-              </h1>
-              <p className="max-w-[750px] text-lg text-muted-foreground md:text-xl">
-                Personalized learning experiences tailored to your unique needs. Master new skills at your own pace with
-                our intelligent tutoring system.
-              </p>
-              <div className="flex flex-col gap-4 sm:flex-row">
-                <Button size="lg" className="gap-2 rounded-full px-6">
-                  Get Started <ArrowRight className="h-4 w-4" />
-                </Button>
-                <Button size="lg" variant="outline" className="rounded-full px-6">
-                  Learn More
-                </Button>
-              </div>
-              <div className="mt-6 flex items-center gap-4 text-sm text-muted-foreground">
-                <div className="flex items-center gap-1">
-                  <Zap className="h-4 w-4 text-primary" />
-                  <span>10k+ Students</span>
-                </div>
-                <div className="h-1 w-1 rounded-full bg-muted-foreground/30"></div>
-                <div className="flex items-center gap-1">
-                  <Lightbulb className="h-4 w-4 text-primary" />
-                  <span>500+ Courses</span>
-                </div>
-                <div className="h-1 w-1 rounded-full bg-muted-foreground/30"></div>
-                <div className="flex items-center gap-1">
-                  <Users className="h-4 w-4 text-primary" />
-                  <span>Expert Mentors</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="container py-20 md:py-28">
-          <div className="mb-12 text-center">
-            <h2 className="mb-3 text-3xl font-bold tracking-tight md:text-4xl">Why Choose QuestEd?</h2>
-            <p className="mx-auto max-w-[700px] text-muted-foreground">
-              Our platform combines cutting-edge AI with proven educational methods to deliver an unmatched learning
-              experience.
-            </p>
-          </div>
-          <div className="grid gap-8 md:grid-cols-3">
-            <div className="group rounded-xl border bg-card p-6 shadow-sm transition-all hover:shadow-md">
-              <div className="mb-5 inline-flex rounded-lg bg-primary/10 p-3 text-primary">
-                <Sparkles className="h-6 w-6" />
-              </div>
-              <h3 className="mb-2 text-xl font-semibold">Personalized Learning</h3>
-              <p className="mb-4 text-muted-foreground">
-                AI-driven content that adapts to your learning style and pace for maximum retention and engagement.
-              </p>
-              <Link href="#" className="inline-flex items-center text-sm font-medium text-primary">
-                Learn more <ChevronRight className="ml-1 h-3 w-3" />
-              </Link>
-            </div>
-            <div className="group rounded-xl border bg-card p-6 shadow-sm transition-all hover:shadow-md">
-              <div className="mb-5 inline-flex rounded-lg bg-primary/10 p-3 text-primary">
-                <BookOpen className="h-6 w-6" />
-              </div>
-              <h3 className="mb-2 text-xl font-semibold">Extensive Library</h3>
-              <p className="mb-4 text-muted-foreground">
-                Access thousands of courses across various subjects and disciplines, updated regularly with new content.
-              </p>
-              <Link href="#" className="inline-flex items-center text-sm font-medium text-primary">
-                Browse courses <ChevronRight className="ml-1 h-3 w-3" />
-              </Link>
-            </div>
-            <div className="group rounded-xl border bg-card p-6 shadow-sm transition-all hover:shadow-md">
-              <div className="mb-5 inline-flex rounded-lg bg-primary/10 p-3 text-primary">
-                <Users className="h-6 w-6" />
-              </div>
-              <h3 className="mb-2 text-xl font-semibold">Community Learning</h3>
-              <p className="mb-4 text-muted-foreground">
-                Connect with peers and experts to enhance your educational journey through collaborative projects.
-              </p>
-              <Link href="#" className="inline-flex items-center text-sm font-medium text-primary">
-                Join community <ChevronRight className="ml-1 h-3 w-3" />
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="relative overflow-hidden bg-muted py-20 md:py-28">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-background/0"></div>
-          <div className="container relative">
-            <div className="mx-auto max-w-[800px] rounded-2xl border bg-card p-8 shadow-lg md:p-12">
-              <div className="text-center">
-                <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
-                  Ready to transform your learning?
-                </h2>
-                <p className="mb-8 text-muted-foreground md:text-lg">
-                  Join thousands of students already experiencing the future of education with QuestEd.
-                </p>
-                <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-                  <div className="w-full max-w-sm">
-                    <Input
-                      type="email"
-                      placeholder="Enter your email"
-                      className="h-12 rounded-full border-muted-foreground/20 px-4"
-                    />
-                  </div>
-                  <Button size="lg" className="h-12 rounded-full px-6">
-                    Get Started Free
-                  </Button>
-                </div>
-                <p className="mt-4 text-xs text-muted-foreground">No credit card required. Free 14-day trial.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer className="border-t py-8 md:py-12">
-        <div className="container">
-          <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
-            <div className="flex items-center gap-2">
-              <div className="relative">
-                <BookOpen className="h-5 w-5 text-primary" />
-                <Sparkles className="absolute -right-1 -top-1 h-3 w-3 text-primary" />
-              </div>
-              <span className="text-sm font-bold">QuestEd</span>
-            </div>
-            <div className="flex flex-wrap justify-center gap-8">
-              <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground">
-                About
-              </Link>
-              <Link href="/courses" className="text-sm text-muted-foreground hover:text-foreground">
-                Courses
-              </Link>
-              <Link href="/pricing" className="text-sm text-muted-foreground hover:text-foreground">
-                Pricing
-              </Link>
-              <Link href="/blog" className="text-sm text-muted-foreground hover:text-foreground">
-                Blog
-              </Link>
-              <Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground">
-                Contact
-              </Link>
-            </div>
-            <p className="text-center text-sm text-muted-foreground">
-              © {new Date().getFullYear()} QuestEd. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
-    </div>
-   {/* <nav
+   <nav
       className="py-5 border-b-default border-solid border-gray-200 z-10 w-full bg-inherit lg:fixed"
       id="topnav"
     >
@@ -800,16 +192,16 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </nav> */}
+    </nav> 
 
-    {/* <div className="h-screen w-full">
+    <div className="h-screen w-full">
       <Spline
         scene="https://prod.spline.design/64rr6dXy3jn-wu3N/scene.splinecode" 
       />
-    </div> */}
+    </div>
 
 
-    {/* <section
+    <section
       className="pt-8 lg:pt-32 bg-[url('https://pagedone.io/asset/uploads/1691055810.png')] bg-center bg-cover"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center">
@@ -858,12 +250,12 @@ export default function Home() {
           />
         </div>
       </div>
-    </section> */}
+    </section>
 
 
 
 
-                                                    {/* <section className="py-20">
+                                                    <section className="py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
            <div className="xl:p-24 gap-32 p-12 rounded-2xl bg-gradient-to-r from-indigo-600 to-violet-600 flex  justify-between flex-col-reverse lg:flex-row">
               <div className="w-full lg:w-2/6 relative">
@@ -946,10 +338,10 @@ export default function Home() {
               </div>
            </div>
         </div>
-      </section> */}
+      </section>
 
 
-      {/* <section className="py-20">
+      <section className="py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div
             className="rounded-2xl py-10 px-10 xl:py-16 xl:px-20 bg-gray-50 flex items-center justify-between flex-col gap-16 lg:flex-row">
@@ -1011,11 +403,11 @@ export default function Home() {
             </div>
           </div>
         </div>
-    </section> */}
+    </section>
 
 
 
-    {/* <section className="py-24 ">
+    <section className="py-24 ">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-manrope text-4xl font-bold text-gray-900 text-center mb-16">Our Recent Courses</h2>
           <div className="flex justify-center  gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8">
@@ -1054,11 +446,11 @@ export default function Home() {
              </div>
           </div>
         </div>
-    </section> */}
+    </section>
 
 
 
-    {/* <section className="py-24">
+    <section className="py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 grid-cols-1">
             <div className="lg:mb-0 mb-10">
@@ -1120,11 +512,11 @@ export default function Home() {
         </div>
       </div>
       </div>
-    </section> */}
+    </section>
 
 
 
-    {/* <section className="py-24 relative">
+    <section className="py-24 relative">
         <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
             <div className="w-full flex-col justify-start items-center lg:gap-11 gap-8 inline-flex">
                 <div className="w-full flex-col justify-start items-center gap-2.5 flex">
@@ -1208,11 +600,11 @@ export default function Home() {
                 </div>
             </div>
         </div>
-    </section> */}
+    </section>
                                             
 
 
-    {/* <footer className="w-full">
+     <footer className="w-full">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             
             <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-8 py-10 max-sm:max-w-sm max-sm:mx-auto gap-y-8">
@@ -1321,7 +713,7 @@ export default function Home() {
                 </div>
             </div>
         </div>
-    </footer> */}
+    </footer>
                                                                           
                                             
                                             
