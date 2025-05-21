@@ -23,7 +23,7 @@ export default async function POST(req: Request) {
   console.log(messages)
 
   const geminiStream = await genAI
-    .getGenerativeModel({ model: 'gemini-1.5-pro' })
+    .getGenerativeModel({ model: 'gemini-2.0-flash-lite' })
     .generateContentStream(buildGoogleGenAIPrompt(messages));
 
   // Convert the response into a friendly text-stream
