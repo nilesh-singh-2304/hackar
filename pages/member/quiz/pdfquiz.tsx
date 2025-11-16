@@ -15,7 +15,7 @@ const Pdfquiz = () => {
   const handleSubmit = async () => {
     const options = {
       method: "POST",
-      url: "https://ai-trivia-questions-generator.p.rapidapi.com/fromText/multiChoice",
+      url: `"https://ai-trivia-questions-generator.p.rapidapi.com/fromText/multiChoice"`,
       headers: {
         "x-rapidapi-key": "efdbb399d6msh78a4b7750642cc8p197564jsnff76aecec8b1",
         "x-rapidapi-host": "ai-trivia-questions-generator.p.rapidapi.com",
