@@ -13,26 +13,48 @@ const Pdfquiz = () => {
   const [qna, setqna] = useState([]);
 
   const handleSubmit = async () => {
-    const options = {
-      method: "POST",
-      url: `"https://ai-trivia-questions-generator.p.rapidapi.com/fromText/multiChoice"`,
-      headers: {
-        "x-rapidapi-key": "efdbb399d6msh78a4b7750642cc8p197564jsnff76aecec8b1",
-        "x-rapidapi-host": "ai-trivia-questions-generator.p.rapidapi.com",
-        "Content-Type": "application/json",
-      },
-      data: {
-        count: noque,
-        difficulty: difficulty,
-        choicesCount: 4,
-        text: topic,
-      },
-    };
 
     try {
-      const response = await axios.request(options);
-      setmcq(response.data.trivia);
-      console.log(response.data.trivia);
+      let response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+  method: "POST",
+  headers: {
+    "Authorization": `Bearer ${`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`}`,
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    "model": "x-ai/grok-4.1-fast:free",
+    "messages": [
+      {
+        "role": "user",
+        "content": `I'll give you 3 parameters : topic , no of question , difficulty generae a mcq quiz out of them haveing the amount of question mentioned on given topic and remember to give response in form of a json and also give the options and the correct aswer also .
+         topic : ${topic} ,
+         difficulty : ${difficulty} , 
+         no of questions : ${noque}
+         
+         Output format:
+{
+  "topic": "",
+  "difficulty": "",
+  "questions": [
+    {
+      "question": "",
+      "options": ["", "", "", ""],
+      "answer": ""
+    }
+  ]
+}`
+      }
+    ],
+    "reasoning": {"enabled": true}
+  })
+})
+
+const data = await response.json();
+const rawJson = data.choices[0].message.content;
+const quizJson = JSON.parse(rawJson);
+console.log(quizJson.questions);
+      setmcq(quizJson.questions);
+      // console.log(response.data.trivia);
     } catch (error) {
       console.error(error);
     }
@@ -93,10 +115,10 @@ const Pdfquiz = () => {
               <div key={mcq.question} className="bg-base-100 my-1 shadow-xl">
                 <div className="">
                   <h2 className="card-title">{mcq.question}</h2>
-                  {mcq.incorrect_answers.map((opts) => (
+                  {mcq.options.map((opts) => (
                     <p key={opts}>{opts}</p>
                   ))}
-                  <p>{mcq.correct_answer}</p>
+                  {/* <p>{mcq.correct_answer}</p> */}
                 </div>
               </div>
             ))}

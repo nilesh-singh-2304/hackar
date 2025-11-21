@@ -3,6 +3,10 @@ import axios from "axios";
 import MemSidebar from "@/components/memSidebar";
 import Link from "next/link";
 const index = () => {
+  const fetchData = async () => {
+    // async logic here
+  };
+
   return (
     <div>
       <MemSidebar />
