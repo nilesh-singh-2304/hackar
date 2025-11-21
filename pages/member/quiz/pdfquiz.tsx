@@ -18,7 +18,7 @@ const Pdfquiz = () => {
       let response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
   method: "POST",
   headers: {
-    "Authorization": `Bearer ${`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`}`,
+    "Authorization": `Bearer ${process.env.NEXT_PUBLIC_OPENROUTER_API_KEY}`,
     "Content-Type": "application/json"
   },
   body: JSON.stringify({
