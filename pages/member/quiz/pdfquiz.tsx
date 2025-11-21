@@ -12,53 +12,70 @@ const Pdfquiz = () => {
   const [truef, settruef] = useState([]);
   const [qna, setqna] = useState([]);
 
-  const handleSubmit = async () => {
+//   const handleSubmit = async () => {
 
-    try {
-      let response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-  method: "POST",
-  headers: {
-    "Authorization": `Bearer ${process.env.NEXT_PUBLIC_OPENROUTER_API_KEY}`,
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify({
-    "model": "x-ai/grok-4.1-fast:free",
-    "messages": [
-      {
-        "role": "user",
-        "content": `I'll give you 3 parameters : topic , no of question , difficulty generae a mcq quiz out of them haveing the amount of question mentioned on given topic and remember to give response in form of a json and also give the options and the correct aswer also .
-         topic : ${topic} ,
-         difficulty : ${difficulty} , 
-         no of questions : ${noque}
+//     try {
+//       let response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+//   method: "POST",
+//   headers: {
+//     "Authorization": `Bearer ${process.env.NEXT_PUBLIC_OPENROUTER_API_KEY}`,
+//     "Content-Type": "application/json"
+//   },
+//   body: JSON.stringify({
+//     "model": "x-ai/grok-4.1-fast:free",
+//     "messages": [
+//       {
+//         "role": "user",
+//         "content": `I'll give you 3 parameters : topic , no of question , difficulty generae a mcq quiz out of them haveing the amount of question mentioned on given topic and remember to give response in form of a json and also give the options and the correct aswer also .
+//          topic : ${topic} ,
+//          difficulty : ${difficulty} , 
+//          no of questions : ${noque}
          
-         Output format:
-{
-  "topic": "",
-  "difficulty": "",
-  "questions": [
-    {
-      "question": "",
-      "options": ["", "", "", ""],
-      "answer": ""
-    }
-  ]
-}`
-      }
-    ],
-    "reasoning": {"enabled": true}
-  })
-})
+//          Output format:
+// {
+//   "topic": "",
+//   "difficulty": "",
+//   "questions": [
+//     {
+//       "question": "",
+//       "options": ["", "", "", ""],
+//       "answer": ""
+//     }
+//   ]
+// }`
+//       }
+//     ],
+//     "reasoning": {"enabled": true}
+//   })
+// })
 
-const data = await response.json();
-const rawJson = data.choices[0].message.content;
-const quizJson = JSON.parse(rawJson);
-console.log(quizJson.questions);
-      setmcq(quizJson.questions);
-      // console.log(response.data.trivia);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+// const data = await response.json();
+// const rawJson = data.choices[0].message.content;
+// const quizJson = JSON.parse(rawJson);
+// console.log(quizJson.questions);
+//       setmcq(quizJson.questions);
+//       // console.log(response.data.trivia);
+//     } catch (error) {
+//       console.error(error);
+//     }
+//   };
+
+
+const handleSubmit = async () => {
+  try {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/quiz`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ topic, difficulty, noque }),
+    });
+
+    const quiz = await response.json();
+    setmcq(quiz?.questions);
+
+  } catch (error) {
+    console.error("Error:", error);
+  }
+};
 
   return (
     <div className="overflow-x-hidden">
@@ -115,7 +132,7 @@ console.log(quizJson.questions);
               <div key={mcq.question} className="bg-base-100 my-1 shadow-xl">
                 <div className="">
                   <h2 className="card-title">{mcq.question}</h2>
-                  {mcq.options.map((opts) => (
+                  {mcq?.options.map((opts) => (
                     <p key={opts}>{opts}</p>
                   ))}
                   {/* <p>{mcq.correct_answer}</p> */}
